@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device_width, initial_scale=1.0 ">
+<style>
+html{
+height:100%;
+width:100%;}
+
+	h1{font-family: 'Brush Script MT', cursive; 
+       font-weight:bold;
+       color:black;
+       font-size:45px;
+       text-align: center;
+       }
+
+    body
+		{
+		margin: 0 auto;
+        background-color:rgb(180,180,180);
+		height:100%;
+        }
+	
+	.container
+		{
+		display: flex;
+        flex-direction:row;
+		height:100%;
+		}
+	
+	.left-container
+		{
+		width:33%;
+		}
+		
+	.img1{
+		width:500px;
+		margin-top:12%;
+		margin-left:5%;
+		margin-bottom:auto;
+		transform: rotate(-25deg);
+		}
+	
+	.center-container
+		{MARGIN: AUTO;
+		}
+		
+		
+		
+		
+    .all-text
+		{display: flex;
+        flex-direction: column;
+        align-items: center;
+		}
+
+    
+	
+	.enter-text-textbox
+		{
+		margin: auto;
+		display: flex;
+		flex-direction: row;
+		}
+
+	.enter-text
+		{
+		font-family: Arial;
+		font-size: 30px;
+		height:40px;
+		width: auto;
+		margin-right:10px;
+		}
+
+    .textbox input
+		{
+		padding: 5px 10px;
+		margin:10px;
+		font-size: 32px;
+		}
+
+    	
+	.sarcastic
+		{
+		font-family:'Brush Script MT', cursive;
+		font-size:38px;
+		height:40px;
+		color:darkgreen;
+		padding-bottom: 10px;
+		}
+	
+	.not_sarcastic
+		{
+		font-family:'Brush Script MT', cursive;
+		font-size:38px;
+		height:40px;
+		color:darkred;
+		}
+	
+	
+	
+    .right-container
+		{
+		display: flex;
+        flex-direction: column;
+		width:33%;
+		}
+	
+	
+	.img2
+		{	
+			width:500px;
+
+			margin-bottom:2%;
+			margin-right:2%;
+
+			margin-top:auto;
+			transform: rotate(-25deg);
+		}
+	
+    
+    
+        
+
+
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="left-container">
+			<img class="img img1" src="https://static.boredpanda.com/blog/wp-content/uploads/2019/10/stupid-funny-newspaper-headlines-19-5db2bdce120d2__700.jpg" alt="sarcastic img1">
+	</div>
+	
+	<div class="center-container">
+		<div class="all-text">
+			<h1>SARCASM DETECTOR</h1>
+
+			<div class="enter-text-textbox">
+				<div class="enter-text">
+					Enter the news headline!
+				</div>
+				
+				<form method="POST" action="/">
+					<div class="textbox">
+						<input type="text" name="headline">
+					</div>
+
+				</form>
+
+				
+			</div>
+			
+				{% if (messages is defined) and messages %}
+					
+					{%if messages["answer"] %}
+					<div class="sarcastic"><p>SARCASTIC<p>
+					</div>
+					{%else %}
+					<div class="not_sarcastic"><p>NOT SARCASTIC</p>
+					</div>
+					{%endif%}
+				{% endif %}
+			
+			</div>
+	</div>
+	
+	
+	<div class="right-container">
+
+		<img class="img img2" src="https://images.theconversation.com/files/289452/original/file-20190826-8841-1dkc0n4.png" alt="sarcastic img2">
+	</div>
+	
+
+</body>
+</html>
